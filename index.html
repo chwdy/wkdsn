@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <meta name="viewport" content="width = device-width, user-scalable = no">
+</head>
+
+<body>
+
+    <p id="demo">
+
+    </p>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner cover text-center">
+            <h1 class="cover-heading">Work design test</h1>
+            <p class="lead">This is the individual project of my Work design class. It is about the effect of
+                performance when having a physical support when using a touchpen.</p>
+            <p class="text-left"> + your will be ask to use a roll of paper to support your apple pencil and finish the
+                first
+                round of the test.</p>
+            <p class="text-left"> +then remove the paper and do the test again. the performance will be recorded in the
+                background only for project use. No personal information will be colected during the test.</p>
+            <p class="text-left"> +thank you for your time taking the test and if you agree to take the test. please
+                follow the
+                instruction below and press start when ready.</p>
+            <p>
+                <img src="/wkdsn/pic/des.png">
+            </p>
+            <p class="lead">
+                <button onclick="go_description()" class="btn btn-primary">Start</button>
+            </p>
+        </main>
+
+        <script>
+            function go_description() {
+                console.log(11)
+                var timestamp3 = new Date().getTime();
+                window.location.href = "1.html?userid=" + timestamp3;
+
+            }
+        </script>
+</body>

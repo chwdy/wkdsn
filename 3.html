@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="3.js"></script>
+    <meta name="viewport" content="width = device-width,user-scalable = no">
+</head>
+
+<body
+    style="background-image:url('/wkdsn/pic/drawing.png');background-repeat: no-repeat;background-position: center;font-size: 0">
+    <div class="float-right" style="height: 38px;margin: 0px;border: 0px;padding: 0px;font-size: 0">
+        <button class="btn btn-success" onclick="draw_fin()">finish</button>
+    </div>
+
+    <canvas id="can" style=" box-sizing: border-box;">
+
+    </canvas>
+    <div class="modal fade" id="startModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Test 3</h5>
+                </div>
+                <div class="modal-body" >
+                        <p style="font-size: 20px">draw all the shape on the screen.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="start_modal()">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="exitModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: fit-content;" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Position select</h5>
+                </div>
+                <div class="modal-body">
+                    <h1 class="cover-heading">select your position</h1>
+                    <p class="lead">choose the position that fits you from the picture below</p>
+                    <div class="row" style="overflow-x: auto;">
+                        <div class="btn-group " role="group" aria-label="Basic example">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="pic/p1.png" style="height: 18rem;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hanging in the Air</h5>
+                                    <button type="button " onclick="pos_select(1)"
+                                        class="btn btn-outline-primary btn-block">1</button>
+                                </div>
+                            </div>
+
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="pic/p2.png" style="height: 18rem;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Wrist local support</h5>
+                                    <button type="button" onclick="pos_select(2)"
+                                        class="btn btn-outline-primary btn-block">2</button>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="pic/p3.png" style="height: 18rem;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Little finger local support</h5>
+                                    <button type="button" onclick="pos_select(3)"
+                                        class="btn btn-outline-primary btn-block">3</button>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="pic/p4.png" style="height: 18rem; " alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Elbow local support</h5>
+                                    <button type="button" onclick="pos_select(4)"
+                                        class="btn btn-outline-primary btn-block">4</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p id="selection" style="margin: 2rem;">
+
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="end_modal()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
