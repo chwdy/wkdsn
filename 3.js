@@ -163,7 +163,7 @@ function go_next() {
     wlog("test3 end", endtime)
     wlog("totaltime in test3", endtime - starttime)
     flush_log()
-    window.location.href = "change.html?userid=" + id;
+    
 }
 
 function pos_select(i) {
@@ -182,6 +182,7 @@ function flush_log() {
         if (ajax.readyState == 4 && ajax.status == 200) {
             var msg = ajax.responseText;
             console.log(msg);
+            window.location.href = "change.html?userid=" + id;
         }
     }
     //2.创建http请求,并设置请求地址

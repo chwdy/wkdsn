@@ -105,7 +105,7 @@ function tm(e) {
 
 function draw_fin() {
     saveImage()
-    wlog("test3_drawend", 1)
+    wlog("test6_drawend", 1)
     $("#exitModal").modal('show')
     removeEventListener("touchstart", ta, {
         passive: false
@@ -156,7 +156,7 @@ function go_next() {
     wlog("test6 end", endtime)
     wlog("totaltime in test6", endtime - starttime)
     flush_log()
-    window.location.href = "end.html?userid=" + id;
+
 }
 
 function pos_select(i) {
@@ -175,6 +175,7 @@ function flush_log() {
         if (ajax.readyState == 4 && ajax.status == 200) {
             var msg = ajax.responseText;
             console.log(msg);
+            window.location.href = "end.html?userid=" + id;
         }
     }
     //2.创建http请求,并设置请求地址

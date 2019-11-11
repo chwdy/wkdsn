@@ -70,14 +70,14 @@ function random_btn() {
 function start_modal() {
     $("#startModal").modal("hide")
     var a = new Date().getTime()
-    wlog("enter test1", a)
+    wlog("enter test4", a)
     this.starttime = a
 }
 
 function end_modal() {
     if (select != 0) {
         $("#endModal").modal("hide")
-        wlog("test1_gesture", select)
+        wlog("test4_gesture", select)
         go_next()
     } else {
         this.document.getElementById("selection").textContent = "please select a postion"
@@ -97,8 +97,6 @@ function go_next() {
     wlog("test4 end", endtime)
     wlog("totaltime in test4", endtime - starttime)
     flush_log()
-    flush_log()
-    window.location.href = "5.html?userid=" + id;
 }
 
 function GetQueryString(name) {
@@ -119,6 +117,7 @@ function flush_log() {
         if (ajax.readyState == 4 && ajax.status == 200) {
             var msg = ajax.responseText;
             console.log(msg);
+            window.location.href = "5.html?userid=" + id;
         }
     }
     //2.创建http请求,并设置请求地址

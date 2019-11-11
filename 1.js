@@ -81,7 +81,6 @@ function end_modal() {
         var endtime = new Date().getTime()
         wlog("test1 end", endtime)
         wlog("totaltime in test1", endtime - starttime)
-        flush_log()
         go_next()
     } else {
         this.document.getElementById("selection").textContent = "please select a postion"
@@ -98,7 +97,7 @@ function pos_select(i) {
 
 function go_next() {
     flush_log()
-    window.location.href = "2.html?userid=" + id;
+
 }
 
 function GetQueryString(name) {
@@ -119,6 +118,7 @@ function flush_log() {
         if (ajax.readyState == 4 && ajax.status == 200) {
             var msg = ajax.responseText;
             console.log(msg);
+            window.location.href = "2.html?userid=" + id;
         }
     }
     //2.创建http请求,并设置请求地址
